@@ -1,0 +1,245 @@
+.page-header {
+  position: relative;
+  padding: 35px 103px 268px;
+  color: $color-alice-blue;
+  background-color: #255eac;
+  background-image: url("../../img/background/main-screen-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include retina {
+    background-image: url("../../img/background/main-screen-desktop@2x.jpg");
+  }
+
+  @include vp-1023 {
+    padding: 27px 45px 266px;
+    background-image: url("../../img/background/main-screen-tablet.jpg");
+    box-shadow: none;
+
+    @include retina {
+      background-image: url("../../img/background/main-screen-tablet@2x.jpg");
+    }
+  }
+
+  @include vp-767 {
+    padding: 20px 15px 170px;
+    background-image: url("../../img/background/main-screen-mobile.jpg");
+    min-height: 500px;
+
+    @include retina {
+      background-image: url("../../img/background/main-screen-mobile@2x.jpg");
+    }
+  }
+}
+
+.page-header__container {
+  margin-bottom: 195px;
+  display: flex;
+  justify-content: space-between;
+
+  @include vp-1023 {
+    margin-bottom: 215px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 128px;
+  }
+}
+
+.page-header__logo svg {
+  @include vp-1023 {
+    width: 38px;
+    height: 20px;
+  }
+
+  @include vp-767 {
+    width: 42px;
+    height: 22px;
+  }
+}
+
+.page-header__navigation {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__toggle {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 24px;
+      height: 2px;
+      top: 4px;
+      left: 0;
+      right: 0;
+      background-color: $color-alice-blue;
+      box-shadow: 0 6px 0 0 $color-alice-blue, 0 12px 0 0 $color-alice-blue;
+    }
+  }
+}
+
+.page-header__list {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+
+  @include vp-1023 {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.page-header__list li {
+  margin: 5px 0 5px 33px;
+
+  @include vp-1023 {
+    margin: 5px 0 5px 23px;
+  }
+}
+
+.page-header.active {
+  @include vp-767 {
+    .page-header__container {
+      align-items: start;
+      margin: 0;
+      padding-top: 10px;
+      padding-left: 5px;
+      position: absolute;
+      min-width: calc(100% - 35px);
+      top: 0;
+      right: 0;
+      min-height: 568px;
+      background-color: $color-alice-blue;
+    }
+
+    svg {
+      fill: $color-tangaroa;
+    }
+
+    .page-header__toggle {
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        width: 16px;
+        height: 2px;
+        top: 10px;
+        right: 0;
+        background-color: $color-tangaroa;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+        left: calc(50% - 4px);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+
+    .page-header__list {
+      display: block;
+      position: absolute;
+      top: 75px;
+      left: 0;
+      right: 0;
+      font-size: 18px;
+      line-height: 22px;
+      background-color: $color-alice-blue;
+    }
+
+    li {
+      margin: 0 0 8px;
+      padding-left: 15px;
+    }
+
+    a {
+      display: block;
+      padding: 10px;
+      color: $color-tangaroa;
+    }
+
+    h1,
+    p {
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-header__wrapper {
+  padding: 0 95px;
+
+  @include vp-1023 {
+    padding: 0;
+  }
+}
+
+.page-header h1 {
+  margin: 0 0 10px;
+  font-size: 54px;
+  line-height: 66px;
+  font-weight: 700;
+
+  @include vp-1023 {
+    font-size: 50px;
+    line-height: 61px;
+  }
+
+  @include vp-767 {
+    font-size: 36px;
+    line-height: 45px;
+  }
+}
+
+.page-header p {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 24px;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+  }
+}

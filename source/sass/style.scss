@@ -9,17 +9,21 @@
 // ---------------------------------
 
 @import "variables";
-// @import "mixins";
+@import "mixins";
 @import "global/fonts";
-// @import "global/reboot";
-// @import "global/utils";
-// @import "global/container";
+@import "global/global.scss";
+// @import "global/wrapper.scss";
 
 // Blocks
 // ---------------------------------
 
-// @import "blocks/btn";
-// @import "blocks/modal";
+@import "blocks/button.scss";
+@import "blocks/list-reset.scss";
+@import "blocks/visually-hidden.scss";
+@import "blocks/page-main.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/description.scss";
 
 // ---------------------------------
 

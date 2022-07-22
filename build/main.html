@@ -13,54 +13,115 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
-    <div class="wrapper">
-      <header>
-        <div class="container"></div>
-      </header>
-      <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Тестовая страница.</h1>
-            <p>На данной странице показан пример модальных окон.</p>
-            <p>Перед началом разработки не забудте удалить всё содержимое &#8249;main&#8250;&#8249;&#8260;main&#8250;.</p>
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
-          </div>
-        </section>
-      </main>
-      <footer>
-        <div class="container"></div>
-      </footer>
-    </div>
 
-    <!-- Модалки -->
-    <div class="modal modal--preload" data-modal="feedback">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
+    <header class="page-header">
+    <!-- <header class="page-header active"> -->
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
-      <div class="modal__wrapper">
-        <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-            <svg width="15" height="15">
-              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+        <div class="page-header__container">
+          <a class="page-header__logo" aria-label="Логотип интернет-магазина Круизы в Антарктику.">
+            <svg role="img" aria-hidden="true" focusable="false"  width="70" height="38" fill="#f9fbfd">
+              <use href="img/sprite_auto.svg#logo"></use>
             </svg>
-          </button>
+          </a>
+
+          <nav class="page-header__navigation no-js__navigation">
+            <button class="page-header__toggle no-js__toggle" type="button">
+              <span class="visually-hidden">Открыть меню.</span>
+            </button>
+            <ul class="page-header__list list-reset no-js__nav-list">
+              <li>
+                <a href="#features">Преимущества</a>
+              </li>
+              <li>
+                <a href="#directions">Направления</a>
+              </li>
+              <li>
+                <a href="#cruises">Ближайшие круизы</a>
+              </li>
+              <li>
+                <a href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
         </div>
+        <div class="page-header__wrapper">
+          <h1>Круизы в&nbsp;Антарктику</h1>
+          <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
+        </div>
+    </header>
+
+    <main class="page-main">
+      <section class="description">
+        <div>
+          <h2>Путешествие на&nbsp;край&nbsp;Земли</h2>
+          <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов,<br> морских котиков и многое другое.</p>
+        </div>
+        <div class="description__container">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)" srcset="img/description-mobile@1x.webp 1x, img/description-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1023px)" srcset="img/description-tablet@1x.webp 1x, img/description-tablet@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/description-desktop@1x.webp 1x, img/description-desktop@2x.webp 2x">
+
+            <!-- 1x: 684px; 2x: 1368px -->
+            <img src="img/description/description.jpg" srcset="img/description/description@2x.jpg" width="684" height="385" alt="Три пингвина на снежном фоне.">
+          </picture>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__container">
+        <a class="page-footer__logo">
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/logo/logo-mobile.svg">
+            <source media="(max-width: 1023px)" srcset="img/logo/logo-tablet.svg">
+            <img src="img/logo/logo-desktop.svg" width="70" height="38" alt="Логотип интернет-магазина Круизы в Антарктику.">
+          </picture>
+        </a>
+
+        <ul class="page-footer__navigation list-reset">
+          <li>
+            <a href="#features">Преимущества</a>
+          </li>
+          <li>
+            <a href="#directions">Направления</a>
+          </li>
+          <li>
+            <a href="#cruises">Ближайшие круизы</a>
+          </li>
+          <li>
+            <a href="#contacts">Контакты</a>
+          </li>
+        </ul>
       </div>
-    </div>
+
+      <ul class="page-footer__social-list list-reset">
+        <li>
+          <a href="#" aria-label="Ссылка на Facebook">
+            <svg role="img" aria-hidden="true" focusable="false"  width="11" height="20" fill="#f9fbfd">
+              <use href="img/sprite_auto.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Ссылка на Instagram">
+            <svg role="img" aria-hidden="true" focusable="false"  width="21" height="20" fill="#f9fbfd">
+              <use href="img/sprite_auto.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" aria-label="Ссылка на Twitter">
+            <svg role="img" aria-hidden="true" focusable="false"  width="20" height="17" fill="#f9fbfd">
+              <use href="img/sprite_auto.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+    </footer>
+
+
 
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
