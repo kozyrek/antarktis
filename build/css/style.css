@@ -286,6 +286,215 @@ a {
   max-width: none;
 }
 
+.features {
+  position: relative;
+  padding: 110px 103px 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #e3ecf6;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.features::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url("../../img/background/features-desktop.jpg");
+  opacity: 0.1;
+}
+
+.features h2 {
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 600;
+  margin: 0 0 50px;
+  z-index: 1;
+}
+
+.features ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  z-index: 1;
+}
+
+.features li {
+  padding: 81px 30px 17px;
+  background-color: #f9fbfd;
+}
+
+.features h3 {
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  margin: 0 0 5px;
+}
+
+.features p {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 0 0 10px;
+}
+
+.features br {
+  display: none;
+}
+
+.catalog {
+  padding: 110px 118px 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.catalog ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+  grid-template-columns: repeat(4, auto);
+  gap: 30px;
+}
+
+.catalog li {
+  position: relative;
+  overflow: hidden;
+}
+
+.catalog__wrapper {
+  position: relative;
+  max-width: 260px;
+  height: 386px;
+  overflow: hidden;
+}
+
+.catalog__wrapper::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#011c40), to(transparent));
+  background-image: -o-linear-gradient(bottom, #011c40, transparent);
+  background-image: linear-gradient(to top, #011c40, transparent);
+}
+
+.catalog__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 28px 25px 30px;
+  position: absolute;
+  top: 309px;
+  left: 0;
+  right: 0;
+}
+
+.catalog h2 {
+  margin: 0 0 50px;
+  font-size: 28px;
+  line-height: 42px;
+  font-weight: 600;
+}
+
+.catalog__box {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.catalog h3 {
+  margin: 0 0 13px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500;
+  color: #f9fbfd;
+}
+
+.catalog dl {
+  margin: 0;
+}
+
+.catalog dt {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #f9fbfd;
+}
+
+.catalog dd {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #d8d8d9;
+}
+
+.catalog button {
+  width: 100%;
+  margin-top: auto;
+  padding: 9px 10px 10px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+}
+
+.catalog__item:hover,
+.catalog__product-visible {
+  -webkit-box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
+  box-shadow: 0px 4px 35px rgba(1, 28, 64, 0.15);
+}
+
+.catalog__item:hover .catalog__container,
+.catalog__product-visible .catalog__container {
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: #011c40;
+}
+
+.catalog__item:hover .catalog__box,
+.catalog__product-visible .catalog__box {
+  margin-top: 0;
+}
+
 /* @media (hover: hover), screen and (min-width: 0\0) {
   &:hover,
   &:focus {
@@ -404,11 +613,45 @@ a {
     -o-object-fit: contain;
     object-fit: contain;
   }
+
+  .features {
+    padding: 90px 45px 100px;
+  }
+
+  .features::before {
+    background-image: url("../../img/background/features-tablet.jpg");
+  }
+
+  .features h2 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .features ul {
+    gap: 30px;
+  }
+
+  .features li {
+    padding: 71px 16px 9px 20px;
+  }
+
+  .features h3 {
+    line-height: 25px;
+    margin: 0 0 9px;
+  }
+
+  .features br {
+    display: block;
+  }
 }
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
   .page-header {
     background-image: url("../../img/background/main-screen-tablet@2x.jpg");
+  }
+
+  .features::before {
+    background-image: url("../../img/background/features-tablet@2x.jpg");
   }
 }
 
@@ -601,16 +844,54 @@ a {
   .description img {
     left: -198px;
   }
+
+  .features {
+    padding: 57px 15px 35px;
+  }
+
+  .features::before {
+    background-image: url("../../img/background/features-mobile.jpg");
+  }
+
+  .features h2 {
+    font-size: 24px;
+    line-height: 36px;
+    margin: 0 0 30px;
+  }
+
+  .features ul {
+    display: block;
+  }
+
+  .features li {
+    margin: 0 0 30px;
+  }
+
+  .features h3 {
+    padding-right: 85px;
+  }
+
+  .features br {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
   .page-header {
     background-image: url("../../img/background/main-screen-mobile@2x.jpg");
   }
+
+  .features::before {
+    background-image: url("../../img/background/features-mobile@2x.jpg");
+  }
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .page-header {
     background-image: url("../../img/background/main-screen-desktop@2x.jpg");
+  }
+
+  .features::before {
+    background-image: url("../../img/background/features-desktop@2x.jpg");
   }
 }

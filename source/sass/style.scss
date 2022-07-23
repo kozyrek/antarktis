@@ -8,9 +8,9 @@
 // Global
 // ---------------------------------
 
-@import "variables";
-@import "mixins";
-@import "global/fonts";
+@import "variables.scss";
+@import "mixins.scss";
+@import "global/fonts.scss";
 @import "global/global.scss";
 // @import "global/wrapper.scss";
 
@@ -24,6 +24,8 @@
 @import "blocks/page-header.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/description.scss";
+@import "blocks/features.scss";
+@import "blocks/catalog.scss";
 
 // ---------------------------------
 
