@@ -1,5 +1,8 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+// import {iosVhFix} from './utils/ios-vh-fix';
+// import {initModals} from './modules/modals/init-modals';
+// import {initMap} from './modules/get-map.js';
+import {removeClassNoJs} from './modules/on-js.js';
+import {openMenu} from './modules/open-menu.js';
 
 // ---------------------------------
 
@@ -8,16 +11,20 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
 
-  iosVhFix();
+  // iosVhFix();
 
   // Modules
   // ---------------------------------
 
+  // initMap();
+  removeClassNoJs();
+  openMenu();
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initModals();
-  });
+  // window.addEventListener('load', () => {
+  //   initModals();
+  // });
 });
 
 // ---------------------------------

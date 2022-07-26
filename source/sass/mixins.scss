@@ -24,6 +24,16 @@
   }
 }
 
+@mixin button {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  text-align: center;
+  color: $color-tangaroa;
+  background-color: $color-alice-blue;
+}
+
 // @mixin vp-319 {
 //   @media (max-width: $vp-320 - 1) {
 //     @content;

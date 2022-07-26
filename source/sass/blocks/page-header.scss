@@ -7,14 +7,14 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
   @include retina {
     background-image: url("../../img/background/main-screen-desktop@2x.jpg");
   }
 
   @include vp-1023 {
-    padding: 27px 45px 266px;
+    padding: 27px 45px 263px;
     background-image: url("../../img/background/main-screen-tablet.jpg");
     box-shadow: none;
 
@@ -24,7 +24,7 @@
   }
 
   @include vp-767 {
-    padding: 20px 15px 170px;
+    padding: 20px 15px 167px;
     background-image: url("../../img/background/main-screen-mobile.jpg");
     min-height: 500px;
 
@@ -35,7 +35,7 @@
 }
 
 .page-header__container {
-  margin-bottom: 195px;
+  margin-bottom: 191px;
   display: flex;
   justify-content: space-between;
 
@@ -111,7 +111,7 @@
 }
 
 .page-header__list li {
-  margin: 5px 0 5px 33px;
+  margin: 5px 0 10px 33px;
 
   @include vp-1023 {
     margin: 5px 0 5px 23px;
@@ -189,21 +189,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .page-header__wrapper {
   padding: 0 95px;
 
@@ -213,7 +198,7 @@
 }
 
 .page-header h1 {
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   font-size: 54px;
   line-height: 66px;
   font-weight: 700;
@@ -224,6 +209,7 @@
   }
 
   @include vp-767 {
+    margin: 0 0 10px;
     font-size: 36px;
     line-height: 45px;
   }
