@@ -1,8 +1,5 @@
 .booking {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px 163px;
+  padding: 50px 0;
   background-color: #a4ccea;
   background-image: url("../../img/background/booking-desktop.jpg");
   background-repeat: no-repeat;
@@ -14,8 +11,7 @@
   }
 
   @include vp-1023 {
-    padding: 89px 174px 100px;
-    flex-direction: column;
+    padding: 89px 0 100px;
     background-image: url("../../img/background/booking-tablet.jpg");
 
     @include retina {
@@ -24,7 +20,7 @@
   }
 
   @include vp-767 {
-    padding: 60px 15px 65px;
+    padding: 60px 0 65px;
     background-image: url("../../img/background/booking-mobile.jpg");
 
     @include retina {
@@ -36,6 +32,24 @@
   input[type="tel"],
   input[type="email"] {
     width: 100%;
+  }
+}
+
+.booking__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 163px;
+  max-width: 1366px;
+
+  @include vp-1023 {
+    padding: 0 174px;
+    flex-direction: column;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
   }
 }
 
@@ -182,6 +196,10 @@
     top: 20px;
     left: 10px;
   }
+}
+
+.booking input[type="checkbox"]:focus + label::before {
+  outline: 1px auto #e59700;
 }
 
 .booking input[type="checkbox"]:checked + label::after {

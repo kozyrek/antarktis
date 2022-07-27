@@ -1,24 +1,47 @@
 .page-footer {
   margin-top: auto;
-  padding: 50px 96px 46px;
-  display: flex;
-  justify-content: space-between;
+  padding: 50px 0 46px;
   color: $color-alice-blue;
   background-color: $color-tangaroa;
 
   @include vp-1023 {
-    padding: 42px 39px 40px 43px;
+    padding: 42px 0 40px 0;
   }
 
   @include vp-767 {
-    padding: 40px 15px 34px;
+    padding: 40px 0 34px;
+  }
+}
+
+.page-footer__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 144px;
+  gap: 20px;
+  margin: 0 auto;
+  padding: 0 96px;
+  max-width: 1366px;
+
+  @include vp-1023 {
+    padding: 0 39px 0 43px;
+    grid-template-columns: 1fr 111px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
     display: block;
   }
 }
 
 .page-footer__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 40px;
   align-items: center;
+
+  @include vp-1023 {
+    grid-template-columns: 38px 1fr;
+    gap: 27px;
+  }
 
   @include vp-767 {
     display: block;
@@ -61,10 +84,10 @@
 }
 
 .page-footer__navigation li {
-  margin: 5px 0 10px 33px;
+  margin: 5px 33px 10px 0;
 
   @include vp-1023 {
-    margin-left: 23px;
+    margin-right: 23px;
   }
 
   @include vp-767 {
@@ -75,6 +98,7 @@
 .page-footer__navigation a {
   line-height: 20px;
   font-weight: 500;
+  user-select: none;
 
   @include vp-1023 {
     font-size: 12px;
