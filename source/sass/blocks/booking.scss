@@ -153,6 +153,14 @@
   background-color: $color-alice-blue;
   color: $color-tangaroa;
   border: none;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    opacity: 1;
+  }
 }
 
 .booking input::placeholder {
@@ -198,8 +206,13 @@
   }
 }
 
+.booking input[type="checkbox"]:hover + label::before {
+  opacity: 0.7;
+}
+
 .booking input[type="checkbox"]:focus + label::before {
   outline: 1px auto #e59700;
+  opacity: 1;
 }
 
 .booking input[type="checkbox"]:checked + label::after {

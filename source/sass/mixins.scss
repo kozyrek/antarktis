@@ -6,12 +6,6 @@
 
 // Desktop first
 
-// @mixin vp-1024 {
-//   @media (min-width: $vp-1024) {
-//     @content;
-//   }
-// }
-
 @mixin vp-1023 {
   @media (max-width: $vp-1024 - 1) {
     @content;
@@ -24,6 +18,26 @@
   }
 }
 
+@mixin title {
+  font-size: 28px;
+  line-height: 42px;
+
+  @include vp-1023 {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  @include vp-767 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+@mixin subtitle {
+  font-size: 18px;
+  line-height: 27px;
+}
+
 @mixin button {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 14px;
@@ -33,51 +47,17 @@
   color: $color-tangaroa;
   background-color: $color-alice-blue;
   user-select: none;
+
+  &:hover,
+  &:focus {
+    color: rgba(1, 28, 64, 0.6);
+  }
+
+  &:active {
+    color: $color-tangaroa;
+    opacity: 0.8;
+  }
 }
-
-// @mixin vp-319 {
-//   @media (max-width: $vp-320 - 1) {
-//     @content;
-//   }
-// }
-
-// Mobile first
-
-// @mixin vp-375 {
-//   @media (min-width: $vp-375) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-768 {
-//   @media (min-width: $vp-768) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1024 {
-//   @media (min-width: $vp-1024) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1280 {
-//   @media (min-width: $vp-1280) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1440 {
-//   @media (min-width: $vp-1440) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1920 {
-//   @media (min-width: $vp-1920) {
-//     @content;
-//   }
-// }
 
 // ---------------------------------
 

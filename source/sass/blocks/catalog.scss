@@ -85,21 +85,14 @@
 
 .catalog h2 {
   margin: 0 0 48px;
-  font-size: 28px;
-  line-height: 42px;
   font-weight: 600;
   align-self: center;
   text-align: center;
 
-  @include vp-1023 {
-    font-size: 26px;
-    line-height: 39px;
-  }
+  @include title;
 
   @include vp-767 {
     margin: 0 0 30px;
-    font-size: 24px;
-    line-height: 36px;
   }
 }
 
@@ -113,10 +106,10 @@
 
 .catalog h3 {
   margin: 0 0 13px;
-  font-size: 18px;
-  line-height: 27px;
   font-weight: 500;
   color: $color-alice-blue;
+
+  @include subtitle;
 }
 
 .catalog dl {

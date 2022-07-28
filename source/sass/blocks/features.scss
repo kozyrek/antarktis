@@ -65,21 +65,14 @@
 }
 
 .features h2 {
-  font-size: 28px;
-  line-height: 42px;
   font-weight: 600;
   text-align: center;
   margin: 0 0 50px;
   z-index: 1;
 
-  @include vp-1023 {
-    font-size: 26px;
-    line-height: 39px;
-  }
+  @include title;
 
   @include vp-767 {
-    font-size: 24px;
-    line-height: 36px;
     margin: 0 0 30px;
   }
 }
@@ -147,10 +140,10 @@
 }
 
 .features h3 {
-  font-size: 18px;
-  line-height: 27px;
   font-weight: 500;
   margin: 0 0 5px;
+
+  @include subtitle;
 
   @include vp-1023 {
     line-height: 25px;
