@@ -18,47 +18,6 @@
   }
 }
 
-@mixin title {
-  font-size: 28px;
-  line-height: 42px;
-
-  @include vp-1023 {
-    font-size: 26px;
-    line-height: 39px;
-  }
-
-  @include vp-767 {
-    font-size: 24px;
-    line-height: 36px;
-  }
-}
-
-@mixin subtitle {
-  font-size: 18px;
-  line-height: 27px;
-}
-
-@mixin button {
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 600;
-  text-align: center;
-  color: $color-tangaroa;
-  background-color: $color-alice-blue;
-  user-select: none;
-
-  &:hover,
-  &:focus {
-    color: rgba(1, 28, 64, 0.6);
-  }
-
-  &:active {
-    color: $color-tangaroa;
-    opacity: 0.8;
-  }
-}
-
 // ---------------------------------
 
 // не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие

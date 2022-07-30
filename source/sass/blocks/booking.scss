@@ -1,30 +1,30 @@
 .booking {
   padding: 50px 0;
   background-color: #a4ccea;
-  background-image: url("../../img/background/booking-desktop.jpg");
+  background-image: url("../img/background/booking-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
   @include retina {
-    background-image: url("../../img/background/booking-desktop@2x.jpg");
+    background-image: url("../img/background/booking-desktop@2x.jpg");
   }
 
   @include vp-1023 {
     padding: 89px 0 100px;
-    background-image: url("../../img/background/booking-tablet.jpg");
+    background-image: url("../img/background/booking-tablet.jpg");
 
     @include retina {
-      background-image: url("../../img/background/booking-tablet@2x.jpg");
+      background-image: url("../img/background/booking-tablet@2x.jpg");
     }
   }
 
   @include vp-767 {
     padding: 60px 0 65px;
-    background-image: url("../../img/background/booking-mobile.jpg");
+    background-image: url("../img/background/booking-mobile.jpg");
 
     @include retina {
-      background-image: url("../../img/background/booking-mobile@2x.jpg");
+      background-image: url("../img/background/booking-mobile@2x.jpg");
     }
   }
 
@@ -222,7 +222,7 @@
   height: 8px;
   top: 5px;
   left: 3px;
-  background-image: url("../../img/background/check.svg");
+  background-image: url("../img/background/check.svg");
 
   @include vp-767 {
     top: 6px;
@@ -231,7 +231,6 @@
 }
 
 .booking button {
-  @include button;
   margin-top: auto;
   padding: 11px 17px;
   border: none;

@@ -3,33 +3,33 @@
   padding: 35px 0 268px;
   color: $color-alice-blue;
   background-color: #255eac;
-  background-image: url("../../img/background/main-screen-desktop.jpg");
+  background-image: url("../img/background/main-screen-desktop.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
   @include retina {
-    background-image: url("../../img/background/main-screen-desktop@2x.jpg");
+    background-image: url("../img/background/main-screen-desktop@2x.jpg");
   }
 
   @include vp-1023 {
     padding: 27px 0 263px;
-    background-image: url("../../img/background/main-screen-tablet.jpg");
+    background-image: url("../img/background/main-screen-tablet.jpg");
     box-shadow: none;
 
     @include retina {
-      background-image: url("../../img/background/main-screen-tablet@2x.jpg");
+      background-image: url("../img/background/main-screen-tablet@2x.jpg");
     }
   }
 
   @include vp-767 {
     padding: 20px 0 167px;
-    background-image: url("../../img/background/main-screen-mobile.jpg");
+    background-image: url("../img/background/main-screen-mobile.jpg");
     min-height: 500px;
 
     @include retina {
-      background-image: url("../../img/background/main-screen-mobile@2x.jpg");
+      background-image: url("../img/background/main-screen-mobile@2x.jpg");
     }
   }
 }

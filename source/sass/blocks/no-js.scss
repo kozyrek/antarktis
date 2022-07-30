@@ -41,28 +41,28 @@
   }
 
   .no-js__map {
-    background-image: url("../../img/background/map-desktop.jpg");
+    background-image: url("../img/background/map-desktop.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
     @include retina {
-      background-image: url("../../img/background/map-desktop@2x.jpg");
+      background-image: url("../img/background/map-desktop@2x.jpg");
     }
 
     @include vp-1023 {
-      background-image: url("../../img/background/map-tablet.jpg");
+      background-image: url("../img/background/map-tablet.jpg");
 
       @include retina {
-        background-image: url("../../img/background/map-tablet@2x.jpg");
+        background-image: url("../img/background/map-tablet@2x.jpg");
       }
     }
 
     @include vp-767 {
-      background-image: url("../../img/background/map-mobile.jpg");
+      background-image: url("../img/background/map-mobile.jpg");
 
       @include retina {
-        background-image: url("../../img/background/map-mobile@2x.jpg");
+        background-image: url("../img/background/map-mobile@2x.jpg");
       }
     }
   }

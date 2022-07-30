@@ -68,11 +68,11 @@
   background-position: top 2px left 2px;
 
   &--address {
-    background-image: url("../../img/background/address.svg");
+    background-image: url("../img/background/address.svg");
   }
 
   &--phone {
-    background-image: url("../../img/background/telephone.svg");
+    background-image: url("../img/background/telephone.svg");
   }
 
   @include vp-1023 {

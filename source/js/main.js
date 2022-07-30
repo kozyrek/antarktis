@@ -1,5 +1,6 @@
 import {removeClassNoJs} from './modules/on-js.js';
 import {openMenu} from './modules/open-menu.js';
+import {initMap} from './modules/init-map.js';
 
 // ---------------------------------
 
@@ -10,6 +11,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
   removeClassNoJs();
   openMenu();
+
+  /* global ymaps*/
+  initMap(ymaps);
 });
 
 // ---------------------------------

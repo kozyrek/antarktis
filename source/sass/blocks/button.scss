@@ -1,0 +1,20 @@
+.button {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  text-align: center;
+  color: $color-tangaroa;
+  background-color: $color-alice-blue;
+  user-select: none;
+
+  &:hover,
+  &:focus {
+    color: rgba(1, 28, 64, 0.6);
+  }
+
+  &:active {
+    color: $color-tangaroa;
+    opacity: 0.8;
+  }
+}

@@ -1,5 +1,5 @@
 .catalog {
-  padding: 111px 118px 120px;
+  padding: 111px 20px 120px;
   display: flex;
   flex-direction: column;
 
@@ -16,9 +16,12 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
+  max-width: 1130px;
+  margin: 0 auto;
 
   @include vp-1023 {
     grid-template-columns: 1fr 1fr;
+    margin: 0;
   }
 
   @include vp-767 {
@@ -29,6 +32,7 @@
 .catalog__item {
   position: relative;
   overflow: hidden;
+  height: 386px;
 
   @include vp-767 {
     margin-bottom: 30px;
@@ -37,7 +41,7 @@
 
 .catalog__wrapper {
   position: relative;
-  height: 386px;
+  height: 100%;
 
   &::after {
     position: absolute;
@@ -65,55 +69,54 @@
 .catalog__container {
   display: flex;
   flex-direction: column;
-  padding: 28px 25px 30px;
+  padding: 28px 25px 35px;
   position: absolute;
-  top: 309px;
-  left: 4px;
+  bottom: -14px;
+  left: 5px;
   right: 0;
 
   @include vp-1023 {
-    padding: 28px 35px 30px;
-    top: 304px;
+    padding: 28px 35px 35px;
+    bottom: -9px;
     left: 0;
   }
 
   @include vp-767 {
-    padding: 28px 25px 30px;
-    top: 314px;
+    padding: 28px 25px 35px;
+    bottom: -18px;
   }
 }
 
 .catalog h2 {
   margin: 0 0 48px;
+  font-size: 28px;
+  line-height: 42px;
   font-weight: 600;
   align-self: center;
   text-align: center;
 
-  @include title;
+  @include vp-1023 {
+    font-size: 26px;
+    line-height: 39px;
+  }
 
   @include vp-767 {
     margin: 0 0 30px;
+    font-size: 24px;
+    line-height: 36px;
   }
 }
 
-.catalog__box {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-top: 25px;
-}
-
 .catalog h3 {
-  margin: 0 0 13px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 27px;
   font-weight: 500;
   color: $color-alice-blue;
-
-  @include subtitle;
 }
 
 .catalog dl {
-  margin: 0;
+  display: none;
 }
 
 .catalog dt {
@@ -131,28 +134,38 @@
 }
 
 .catalog a {
+  position: absolute;
+  bottom: -300%;
   width: 100%;
-  margin-top: auto;
   padding: 9px 3px 10px;
-
-  @include button;
 }
 
 .catalog__item:hover,
-.catalog__item:focus-within,
-.catalog__product-visible {
-  overflow: visible;
+.catalog__item:focus-within {
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
 
+  .catalog__wrapper {
+    display: none;
+  }
+
   .catalog__container {
-    top: 0;
-    left: 0;
-    min-height: 386px;
-    z-index: 1;
+    position: static;
+    height: 100%;
     background-color: $color-tangaroa;
   }
 
-  .catalog__box {
-    margin-top: 0;
+  h3 {
+    margin: 0 0 15px;
+  }
+
+  dl {
+    display: block;
+    margin: 0 0 8px;
+    overflow: scroll;
+  }
+
+  a {
+    position: static;
+    margin-top: auto;
   }
 }
