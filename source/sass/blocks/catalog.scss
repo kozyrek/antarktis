@@ -120,6 +120,7 @@
 }
 
 .catalog dt {
+  margin: 12px 0 0;
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
@@ -127,7 +128,7 @@
 }
 
 .catalog dd {
-  margin: 0 0 12px;
+  margin: 0;
   font-size: 14px;
   line-height: 20px;
   color: $color-quartz;
@@ -155,13 +156,13 @@
   }
 
   h3 {
-    margin: 0 0 15px;
+    margin: 0 0 3px;
   }
 
   dl {
     display: block;
-    margin: 0 0 8px;
-    overflow: scroll;
+    margin: 0 0 5px;
+    overflow-y: scroll;
   }
 
   a {

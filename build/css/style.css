@@ -529,6 +529,7 @@ a {
 }
 
 .catalog dt {
+  margin: 12px 0 0;
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
@@ -536,7 +537,7 @@ a {
 }
 
 .catalog dd {
-  margin: 0 0 12px;
+  margin: 0;
   font-size: 14px;
   line-height: 20px;
   color: #d8d8d9;
@@ -569,14 +570,14 @@ a {
 
 .catalog__item:hover h3,
 .catalog__item:focus-within h3 {
-  margin: 0 0 15px;
+  margin: 0 0 3px;
 }
 
 .catalog__item:hover dl,
 .catalog__item:focus-within dl {
   display: block;
-  margin: 0 0 8px;
-  overflow: scroll;
+  margin: 0 0 5px;
+  overflow-y: scroll;
 }
 
 .catalog__item:hover a,
