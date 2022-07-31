@@ -577,7 +577,7 @@ a {
 .catalog__item:focus-within dl {
   display: block;
   margin: 0 0 5px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .catalog__item:hover a,
