@@ -7,7 +7,7 @@ const initMap = (ymaps) => {
 
     const myPlacemark = new ymaps.Placemark([59.937521, 30.322727], {}, {
       iconLayout: 'default#image',
-      iconImageHref: '/img/background/address.svg',
+      iconImageHref: '../../img/background/address.svg',
       iconImageSize: [18, 22],
       iconImageOffset: [9, 22],
     });

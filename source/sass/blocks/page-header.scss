@@ -1,6 +1,6 @@
 .page-header {
   position: relative;
-  padding: 35px 0 268px;
+  padding: 35px 103px 268px;
   color: $color-alice-blue;
   background-color: #255eac;
   background-image: url("../img/background/main-screen-desktop.jpg");
@@ -35,16 +35,21 @@
 }
 
 .page-header__container {
-  margin-bottom: 191px;
   display: flex;
   justify-content: space-between;
+  margin: 0 auto 191px;
+  max-width: 1160px;
 
   @include vp-1023 {
     margin-bottom: 215px;
+    padding-left: 45px;
+    padding-right: 45px;
   }
 
   @include vp-767 {
     margin-bottom: 128px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -201,7 +206,7 @@
     .page-header__list {
       display: block;
       max-height: 100%;
-      overflow: scroll;
+      overflow-y: auto;
       font-size: 18px;
       line-height: 22px;
     }
@@ -225,10 +230,18 @@
 }
 
 .page-header__wrapper {
+  margin: 0 auto;
+  max-width: 1160px;
   padding: 0 95px;
 
   @include vp-1023 {
-    padding: 0;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @include vp-767 {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
