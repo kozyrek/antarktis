@@ -1,6 +1,7 @@
 import {removeClassNoJs} from './modules/on-js.js';
 import {openMenu} from './modules/open-menu.js';
 import {initMap} from './modules/init-map.js';
+import {setStorage} from './modules/set-storage.js';
 
 // ---------------------------------
 
@@ -14,6 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   /* global ymaps*/
   initMap(ymaps);
+  setStorage();
 });
 
 // ---------------------------------
