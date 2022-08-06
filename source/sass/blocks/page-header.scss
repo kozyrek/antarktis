@@ -151,16 +151,16 @@
     .page-header__container {
       position: fixed;
       top: 0;
-      left: 0;
-      width: 100%;
+      left: 35px;
+      right: 0;
       height: 100vh;
-      background-color: rgba(0, 43, 102, 0.5);
+      z-index: 5;
     }
 
     .page-header__logo {
       position: absolute;
       top: 10px;
-      left: 40px;
+      left: 5px;
       z-index: 1;
     }
 
@@ -171,7 +171,7 @@
     .page-header__navigation {
       position: absolute;
       top: 0;
-      left: 35px;
+      left: 0;
       right: 0;
       bottom: 0;
       display: block;

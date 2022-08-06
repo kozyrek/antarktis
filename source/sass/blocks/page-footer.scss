@@ -17,6 +17,7 @@
   display: grid;
   grid-template-columns: 1fr 144px;
   gap: 20px;
+  align-items: flex-start;
   margin: 0 auto;
   padding: 0 96px;
   max-width: 1366px;
@@ -36,7 +37,7 @@
   display: grid;
   grid-template-columns: 80px 1fr;
   gap: 40px;
-  align-items: center;
+  align-items: flex-start;
 
   @include vp-1023 {
     grid-template-columns: 38px 1fr;
@@ -52,7 +53,7 @@
   margin: 0 7px;
 
   @include vp-1023 {
-    margin: 0 2px;
+    margin: 9px 2px 0;
   }
 
   @include vp-767 {
@@ -76,6 +77,11 @@
 .page-footer__navigation {
   display: flex;
   flex-wrap: wrap;
+  padding-top: 3px;
+
+  @include vp-1023 {
+    padding-top: 0;
+  }
 
   @include vp-767 {
     display: block;
@@ -120,9 +126,11 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  padding-top: 4px;
 
   @include vp-767 {
     margin-left: -9px;
+    padding-top: 0;
   }
 }
 

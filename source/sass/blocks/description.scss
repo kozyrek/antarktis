@@ -56,18 +56,20 @@
 }
 
 .description__container {
-  height: 301px;
+  height: auto;
+  align-self: start;
 
   @include vp-1023 {
-    height: 264px;
+    padding-top: 10px;
   }
 
   @include vp-767 {
-    height: 186px;
+    padding-top: 0;
   }
 }
 
 .description img {
+  display: block;
   width: 100%;
   height: 100%;
 }

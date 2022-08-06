@@ -32,10 +32,11 @@
 .catalog__item {
   position: relative;
   overflow: hidden;
-  height: 386px;
+  height: auto;
 
   @include vp-767 {
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
+    max-width: 647px;
   }
 }
 
@@ -63,7 +64,9 @@
 }
 
 .catalog img {
+  display: block;
   width: 100%;
+  height: 100%;
 }
 
 .catalog__container {
@@ -145,13 +148,10 @@
 .catalog__item:focus-within {
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
 
-  .catalog__wrapper {
-    display: none;
-  }
-
   .catalog__container {
-    position: static;
-    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
     background-color: $color-tangaroa;
   }
 
