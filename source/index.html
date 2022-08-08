@@ -320,7 +320,7 @@
               <input id="first-name" type="text" name="first-name" placeholder="Имя" required>
 
               <label class="visually-hidden" for="phone-number">Номер телефона</label>
-              <input id="phone-number" type="tel" pattern="^(\+7|7|8)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$" title="8(___)-___-__-__" name="phone-number" placeholder="Телефон" required>
+              <input id="phone-number" type="tel" pattern="^[\d\s()+-]*$" title="Номер может содержать цифры, символы (), +, -" name="phone-number" placeholder="Телефон" required>
 
               <label class="visually-hidden" for="e-mail">Адрес электронной почты</label>
               <input id="e-mail" type="email" name="e-mail" placeholder="Email" required>
